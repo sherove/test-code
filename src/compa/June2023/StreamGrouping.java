@@ -14,6 +14,7 @@ public class StreamGrouping {
         list.add(Food.builder().name("치킨").cal(290).build());
         list.add(Food.builder().name("토마토").cal(80).buy(1).build());
         list.add(Food.builder().name("수박").cal(80).buy(1).build());
+        // gd
 
 
         Map<String, List<Food>> collect = list.stream().collect(
