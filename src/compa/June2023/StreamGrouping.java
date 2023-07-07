@@ -13,7 +13,7 @@ public class StreamGrouping {
         list.add(Food.builder().name("떡볶이").cal(400).build());
         list.add(Food.builder().name("치킨").cal(290).build());
         list.add(Food.builder().name("토마토").cal(80).buy(1).build());
-        list.add(Food.builder().name("토마토").cal(80).buy(1).build());
+        list.add(Food.builder().name("수박").cal(80).buy(1).build());
 
 
         Map<String, List<Food>> collect = list.stream().collect(
@@ -29,6 +29,11 @@ public class StreamGrouping {
                 });
         collect.forEach((s, foods) -> {
             System.out.println(s + " : " + foods.size());
+        });
+        collect.forEach((s, foods) -> {
+            for (Food food : foods) {
+                System.out.println(s + " 푸드는 >> " + food.getName());
+            }
         });
     }
 }
